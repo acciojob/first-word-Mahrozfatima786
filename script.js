@@ -1,11 +1,11 @@
-function firstWord(s) {
-  // your code here
-	var firstWord = s.replace(/ .*/,'');
+function firstWord(str) {
+  str = str.trim();
 
-$('body').append(firstWord);
+  const firstSpaceIndex = str.indexOf(" ");
+  if (firstSpaceIndex === -1) {
+    return str;
+  }
+  return str.substring(0, firstSpaceIndex);
 }
-
-// Do not change the code below
-
 const s = prompt("Enter String: see and stop");
 alert(firstWord(s));
